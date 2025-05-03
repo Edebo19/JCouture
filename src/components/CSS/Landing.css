@@ -1,0 +1,77 @@
+.LandingMajor{
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url(../../assets/hero.jpg);
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width:768px) {
+        background-size: cover;
+    }
+}
+.Hero{
+    height: 67%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hold-hero{
+    width: 90%;
+}
+.left{
+    width: 50%;
+    padding: 30px 20px 40px 10px;
+    /* background: rgba(44, 44, 44, 0.5); */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @media screen and (max-width:768px) {
+        width: 100%;
+        
+    }
+
+    & p{
+        font-size: 18px;
+    }
+    
+    & h3{
+        font-size: 30px;
+    }
+        button{
+            height: max-content;
+            width: max-content;
+            display: flex;
+            flex-direction: row;
+            justify-content: center !important;
+            align-items: center !important;
+            background: black;
+            color: rgb(250, 247, 247);
+            gap: 10px;
+            padding: 10px 15px 10px 15px;
+            font-size: 15px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 3px;
+            transition: width 0.3s ease;
+
+            
+
+            & .icon{
+                display: none;
+                /* animation: fadeIn; 
+                animation-duration: 2s; */
+            }
+        }
+        button:hover{
+            cursor: pointer;
+            transition: width 0.3s ease;
+
+            & .icon{
+                display: flex;
+            }
+        }
+}
