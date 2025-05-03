@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "../CSS/Shop.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "aos/dist/aos.css"
+import Aos from "aos";
 
 const Category = () => {
   const navigate = useNavigate("")
@@ -26,6 +28,9 @@ useEffect(()=>{
   getCategories()
 },[])
 
+useEffect(()=>{
+  Aos.init();
+},[])
 
   return (
     <div className="Category">
@@ -39,7 +44,10 @@ useEffect(()=>{
         <div className="productBody">
           {
             category.map((e)=>(
-              <div className="card" key={e.id}>
+              <div className="card"
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              key={e.id}>
           <div className="imageHolder" onClick={()=> navigate(`/browse/specified/${e.category}`)} style={{backgroundImage:`url(${e.image})`}}>
             </div>
             <div className="titleHolder">

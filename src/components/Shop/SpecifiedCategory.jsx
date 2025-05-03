@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
+import "aos/dist/aos.css"
+import Aos from "aos";
 
 const SpecifiedCategory = () => {
   const { catId } = useParams();
@@ -23,6 +25,11 @@ const SpecifiedCategory = () => {
     getProducts();
   }, []);
 
+  useEffect(()=>{
+    Aos.init();
+  },[])
+  
+
   const navigate = useNavigate()
 
   return (
@@ -38,7 +45,10 @@ const SpecifiedCategory = () => {
         </div>
         <div className="productBody">
           {item.map((e) => (
-            <div className="card" key={e.id}>
+            <div className="card"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+            key={e.id}>
               <div
                 className="imageHolder"
                 style={{ backgroundImage: `url(${e.image})` }}

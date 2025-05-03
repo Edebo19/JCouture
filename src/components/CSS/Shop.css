@@ -17,6 +17,7 @@
 .AllProducts {
   display: flex;
   justify-content: center;
+  
 }
 .Category {
   display: flex;
@@ -55,6 +56,7 @@
   height: 350px;
   width: 275px;
   cursor: pointer;
+
 
   @media screen and (max-width: 768px) {
     height: max-content;

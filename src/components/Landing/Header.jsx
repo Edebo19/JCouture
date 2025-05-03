@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../CSS/Header.css";
 import { MdClose, MdHome, MdMenu, MdOutlineShoppingCartCheckout } from "react-icons/md";
 import { FaRegUserCircle, FaShoppingBasket, FaUser } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { TbCategory2 } from "react-icons/tb";
 
 const Header = () => {
@@ -29,9 +29,9 @@ const Header = () => {
         </div>
         <nav>
           <ul>
-            <li onClick={()=>navigate("/")}>Home</li>
-            <li onClick={()=> navigate("/browse/shop")}>Shop</li>
-            <li onClick={()=> navigate("/browse/category")}>Categories</li>
+            <NavLink to="/" style={{ textDecoration: "none" }} className={({isActive})=> [isActive ? "active" : "notActive"]} >Home</NavLink>
+            <NavLink to="/browse/shop" style={{ textDecoration: "none" }} className={({isActive})=> [isActive ? "active" : "notActive"]}>Shop</NavLink>
+            <NavLink to="/browse/category" style={{ textDecoration: "none" }} className={({isActive})=> [isActive ? "active" : "notActive"]}>Categories</NavLink>
           </ul>
         </nav>
         <div className="cart-user-area">

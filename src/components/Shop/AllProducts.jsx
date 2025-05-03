@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import "../CSS/Shop.css";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-
+import "aos/dist/aos.css"
+import Aos from "aos";
 const AllProducts = () => {
 
   const navigate = useNavigate()
@@ -26,6 +27,10 @@ useEffect(()=>{
     getProducts()
 },[])
 
+useEffect(()=>{
+  Aos.init();
+},[])
+
   return (
     <div className="AllProducts">
       <div className="innerAll">
@@ -40,7 +45,10 @@ useEffect(()=>{
         <div className="productBody">
          {
           products.map((e)=>(
-            <div className="card" key={e.id}>
+            <div className="card" key={e.id}
+            data-aos="fade-up"
+            data-aos-duration="3000"
+            >
             <div className="imageHolder" style={{backgroundImage:`url(${e.image})`}} onClick={()=> navigate(`/browse/details/${e.id}`)}>
               <div className="price-button">
                 <div className="price">${e.price}</div>

@@ -37,12 +37,20 @@ nav{
         align-items: center;
         height: 100%;
 
-        & li{
+        .active{
+            cursor: pointer;
+            font-weight: 700;
+            transition: all 350ms ease-in-out;
+            color: black;
+            font-size: 21px;
+        }
+        .notActive{
             list-style: none;
             font-size: 19px;
             font-weight: 400;
             transition: all 350ms ease-in-out;
             transform: scale(1);
+            color: black;
         }
         & li:hover{
             cursor: pointer;

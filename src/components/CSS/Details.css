@@ -28,6 +28,8 @@
     display: flex;
     gap: 30px;
     align-items: flex-end;
+    animation: fadeIn; 
+  animation-duration: 3s;
 
     @media screen and (max-width:768px) {
         flex-direction: column;

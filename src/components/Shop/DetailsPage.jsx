@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "../CSS/Details.css";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import "aos/dist/aos.css"
+import Aos from "aos";
 
 const DetailsPage = () => {
 
