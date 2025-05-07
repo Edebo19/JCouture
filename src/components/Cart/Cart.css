@@ -1,0 +1,181 @@
+.Cart{
+    display: flex;
+    justify-content: center;
+}
+.cartInner{
+    width: 90%;
+}
+.cart-body{
+    width: 100%;
+    margin-top: 20px;
+    background: rgb(228, 181, 158);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 15px 15px 15px 15px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    min-height: 75vh;
+
+    @media screen and (max-width:768px) {
+        width: 100%;
+        height: max-content;
+    }
+}
+.cartHeader{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+    & button{
+        padding: 6px 15px 6px 15px ;
+        font-size: 15px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        background: black;
+        font-weight: 500;
+        max-height: max-content;
+    }
+    & button:hover{
+        background: rgb(212, 22, 22);
+        cursor: pointer;
+        transition: all 350ms;
+        
+    }
+
+    
+}
+.cartSection{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.cartCard{
+    height: 200px;
+    background: rgb(236, 233, 233);
+    border-radius: 6px;
+    padding: 9px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.cart-left{
+    height: 100%;
+    gap: 20px;
+    display: flex;
+}
+.cartImage{
+    height: 100%;
+    width: 200px;
+    border-radius: 5px;
+
+    & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+}
+.cartInfo{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.itemName{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    & h3{
+        font-size: 24px;
+    }
+
+    & p{
+        font-size: 18px;
+    }
+}
+.itemquantity{
+    .qty{
+        background: burlywood;
+        padding: 5px 14px 5px 14px;
+        border: 1px solid rgb(199, 112, 112);
+        border-radius: 4px;
+        display: flex;
+        gap: 15px;
+        font-size: 18px;
+        align-items: center;
+        justify-content: center;
+        width: max-content;
+
+        span{
+            font-weight: 700;
+        }
+        span:hover{
+            cursor: pointer;
+        }
+    }
+}
+.deleteBtn{
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+
+    & button{
+        padding: 6px 15px 6px 15px ;
+        font-size: 15px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        background: rgb(88, 41, 41);
+        font-weight: 500;
+        height: max-content;
+    }
+    & button:hover{
+        background: rgb(212, 22, 22);
+        cursor: pointer;
+        transition: all 350ms;
+        
+    }
+}
+.holdd{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.downn{
+    display: flex;
+    gap: 10px;
+}
+.checkOut{
+    height: 70px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.678);
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.checkButton{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    & button{
+        padding: 6px 15px 6px 15px ;
+        font-size: 15px;
+        border: none;
+        border-radius: 20px; 
+        background: rgba(226, 182, 117, 0.816);
+        color: black;
+        font-weight: 500;
+        height: max-content;
+        border: 1px solid rgba(207, 83, 83, 0.707);
+    }
+}

@@ -6,8 +6,8 @@ import Layout from './components/Shop/Layout'
 import AllProducts from './components/Shop/AllProducts'
 import Category from './components/Shop/Category'
 import DetailsPage from './components/Shop/DetailsPage'
-import Cart from './components/Shop/Cart'
 import SpecifiedCategory from './components/Shop/SpecifiedCategory'
+import Cart from './components/Cart/Cart'
 
 const App = () => {
   const router = createHashRouter([
@@ -34,6 +34,10 @@ const App = () => {
         {
           path: "specified/:catId",
           element: <SpecifiedCategory/>
+        },
+        {
+          path: "cart",
+          element: <Cart/>
         }
       ]
     },

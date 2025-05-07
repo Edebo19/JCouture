@@ -35,7 +35,7 @@ const Header = () => {
           </ul>
         </nav>
         <div className="cart-user-area">
-          <MdOutlineShoppingCartCheckout cursor="pointer" size={30} />
+          <MdOutlineShoppingCartCheckout onClick={()=>navigate("/browse/cart")} cursor="pointer" size={30} />
           <FaRegUserCircle cursor="pointer" size={30} />
         </div>
         <div className="menu" onClick={()=>setOpened(true)}>
@@ -54,7 +54,7 @@ const Header = () => {
               <li onClick={()=>{ navigate("/"), setOpened(false)}}><MdHome /> Home</li>
               <li onClick={()=> {navigate("/browse/shop"), setOpened(false)}}><FaShoppingBasket /> Shop</li>
               <li onClick={()=>{ navigate("/browse/category"), setOpened(false)}}><TbCategory2 /> Categories</li>
-              <li><MdOutlineShoppingCartCheckout /> Cart</li>
+              <li onClick={()=> {navigate("/browse/cart"), setOpened(false)}}><MdOutlineShoppingCartCheckout/> Cart</li>
               <li><FaUser /> User</li>
             </ul>
           </div>

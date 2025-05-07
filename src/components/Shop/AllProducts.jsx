@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "../CSS/Shop.css";
 import { useNavigate, useParams } from "react-router-dom";
+import { useDispatch } from "react-redux"
 import axios from "axios";
 import "aos/dist/aos.css"
 import Aos from "aos";
+import { addToCart } from "../../Global/slice";
 const AllProducts = () => {
 
   const navigate = useNavigate()
+  const dispatch = useDispatch()
   const [products, setProducts] = useState([])
 
   const getProducts =()=>{
@@ -52,7 +55,7 @@ useEffect(()=>{
             <div className="imageHolder" style={{backgroundImage:`url(${e.image})`}} onClick={()=> navigate(`/browse/details/${e.id}`)}>
               <div className="price-button">
                 <div className="price">${e.price}</div>
-                <button>Add to cart</button>
+                <button onClick={()=>dispatch(addToCart(e))}>Add to cart</button>
               </div>
             </div>
             <div className="titleHolder">
